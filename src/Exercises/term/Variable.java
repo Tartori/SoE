@@ -12,8 +12,7 @@ public final class Variable implements Term {
     }
 
     @Override
-    public int eval(Context ctx) {
-        return 0;
-                //ctx.getValueOf(name);
+    public int eval(Context context) {
+        return context.lookup(name);
     }
 }
