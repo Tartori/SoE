@@ -1,6 +1,6 @@
-package Exercises.term.test;
+package Exercises.term.OkVersion.test;
 
-import Exercises.term.Operation;
+import Exercises.term.OkVersion.Operation;
 import org.junit.Assert;
 import org.junit.Test;
 

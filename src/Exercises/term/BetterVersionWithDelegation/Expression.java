@@ -1,4 +1,6 @@
-package Exercises.term;
+package Exercises.term.BetterVersionWithDelegation;
+
+import Exercises.term.BetterVersionWithDelegation.operation.Operation;
 
 public final class Expression implements Term {
     private final Term left;
@@ -16,6 +18,6 @@ public final class Expression implements Term {
     public int eval(Context ctx) {
         int leftValue = left.eval(ctx);
         int rightValue = right.eval(ctx);
-        return operation.apply(leftValue, rightValue);
+        return operation.calculate(leftValue, rightValue);
     }
 }

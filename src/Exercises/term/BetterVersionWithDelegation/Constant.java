@@ -1,4 +1,4 @@
-package Exercises.term;
+package Exercises.term.BetterVersionWithDelegation;
 
 public final class Constant implements Term {
     private final int value;

@@ -1,4 +1,4 @@
-package Exercises.term;
+package Exercises.term.BetterVersionWithInheritence;
 
 public final class Variable implements Term {
     private final String name;

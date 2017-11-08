@@ -1,4 +1,4 @@
-package Exercises.term;
+package Exercises.term.OkVersion;
 
 public enum Operation {
     Add {

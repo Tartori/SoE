@@ -1,6 +1,6 @@
-package Exercises.term.test;
+package Exercises.term.BetterVersionWithDelegation.test;
 
-import Exercises.term.Context;
+import Exercises.term.BetterVersionWithDelegation.Context;
 import org.junit.Assert;
 import org.junit.Test;
 

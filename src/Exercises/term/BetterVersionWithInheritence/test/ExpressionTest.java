@@ -1,6 +1,6 @@
-package Exercises.term.test;
+package Exercises.term.BetterVersionWithInheritence.test;
 
-import Exercises.term.*;
+import Exercises.term.BetterVersionWithInheritence.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class ExpressionTest {
         int leftValue = 5;
         int rightValue = 6;
         int expected = 5+6;
-        operateOnTwoConstants(leftValue, rightValue, expected, Operation.Add);
+        operateOnTwoConstants(leftValue, rightValue, expected, new Addition());
     }
 
     @Test
@@ -18,7 +18,7 @@ public class ExpressionTest {
         int leftValue = 5;
         int rightValue = 6;
         int expected = 5-6;
-        operateOnTwoConstants(leftValue, rightValue, expected, Operation.Subtract);
+        operateOnTwoConstants(leftValue, rightValue, expected, new Subtraction());
     }
 
     @Test
@@ -26,7 +26,7 @@ public class ExpressionTest {
         int leftValue = 5;
         int rightValue = 6;
         int expected = 5*6;
-        operateOnTwoConstants(leftValue, rightValue, expected, Operation.Multiply);
+        operateOnTwoConstants(leftValue, rightValue, expected, new Multiplication());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class ExpressionTest {
         int leftValue = 5;
         int rightValue = 6;
         int expected = 5/6;
-        operateOnTwoConstants(leftValue, rightValue, expected, Operation.Divide);
+        operateOnTwoConstants(leftValue, rightValue, expected, new Division());
     }
 
     @Test
@@ -46,11 +46,11 @@ public class ExpressionTest {
         String rightVariable = "right";
         Term left = new Variable(leftVariable);
         Term right = new Variable(rightVariable);
-        Term expression = new Expression(left, right, Operation.Add);
+        Assert.fail("not yet implemented");// Term expression = new Expression(left, right, new Addition());
         Context context = new Context();
         context.bind(leftVariable, leftValue);
         context.bind(rightVariable, rightValue);
-        Assert.assertEquals(expected, expression.eval(context));
+        //Assert.assertEquals(expected, expression.eval(context));
     }
 
     @Test
@@ -62,10 +62,11 @@ public class ExpressionTest {
         int rightValue2 = 6;
         int expected2 = 5-6;
         int expected = expected1+expected2;
-        Term expression1=generateExpressionWithTwoConstants(leftValue1, rightValue1, Operation.Add);
-        Term expression2=generateExpressionWithTwoConstants(leftValue2, rightValue2, Operation.Subtract);
-        Term expression = new Expression(expression1, expression2, Operation.Add);
-        Assert.assertEquals(expected, expression.eval(new Context()));
+        Term expression1=generateExpressionWithTwoConstants(leftValue1, rightValue1, new Addition());
+        Term expression2=generateExpressionWithTwoConstants(leftValue2, rightValue2, new Subtraction());
+        //Term expression = new Expression(expression1, expression2, new Addition());
+        //Assert.assertEquals(expected, expression.eval(new Context()));
+        Assert.fail("not yet implemented");
 
     }
     private void operateOnTwoConstants(int leftValue, int rightValue, int expected, Operation operation){
@@ -76,6 +77,8 @@ public class ExpressionTest {
     private Term generateExpressionWithTwoConstants(int leftValue, int rightValue, Operation operation){
         Term left = new Constant(leftValue);
         Term right = new Constant(rightValue);
-        return new Expression(left, right, operation);
+        Assert.fail("not yet implemented");
+        //return new Expression(left, right, operation);
+        return null;
     }
 }

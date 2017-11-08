@@ -1,10 +1,10 @@
-package Exercises.term.test;
+package Exercises.term.BetterVersionWithDelegation.test;
 
-import Exercises.term.Context;
-import Exercises.term.Term;
+import Exercises.term.BetterVersionWithDelegation.Constant;
+import Exercises.term.BetterVersionWithDelegation.Context;
+import Exercises.term.BetterVersionWithDelegation.Term;
 import org.junit.Assert;
 import org.junit.Test;
-import Exercises.term.Constant;
 
 public class ConstantTest {
     @Test
